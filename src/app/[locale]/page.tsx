@@ -1,11 +1,20 @@
-import { useTranslations } from "next-intl";
+import Hero from "@/components/hero/Hero";
+import About from "@/components/about/About";
+import Experience from "@/components/experience/Experience";
+import Projects from "@/components/projects/Projects";
+import Skills from "@/components/skills/Skills";
+import Contact from "@/components/contact/Contact";
+import Footer from "@/components/layout/Footer";
 
 export default function HomePage() {
-  const t = useTranslations();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">{t("hero.title")}</h1>
-      <p className="mt-2 text-xl text-gray-600">{t("hero.subtitle")}</p>
-    </main>
+    <>
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Skills />
+      <Contact />
+    </>
   );
 }
