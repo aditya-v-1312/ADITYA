@@ -12,30 +12,37 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#050816]/80 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#050816]/70 backdrop-blur-xl">
       <Container className="flex h-20 items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-white">
-          AC
+        {/* Logo */}
+        <Link
+          href="/"
+          className="text-3xl font-black tracking-tight text-white transition duration-300 hover:text-blue-400"
+        >
+          <span className="text-white">A</span>
+          <span className="text-blue-500">C</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        {/* Navigation */}
+        <nav className="hidden items-center gap-10 md:flex">
           {links.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-slate-300 transition hover:text-blue-400"
+              className="relative text-sm font-medium tracking-wide text-slate-300 transition duration-300 hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.name}
             </a>
           ))}
         </nav>
 
-        <Link
+        {/* CTA */}
+        <a
           href="#contact"
-          className="rounded-lg bg-blue-600 px-5 py-2 text-white transition hover:bg-blue-500"
+          className="rounded-full border border-blue-500/30 bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-500 hover:shadow-blue-500/40"
         >
           Let's Talk
-        </Link>
+        </a>
       </Container>
     </header>
   );
