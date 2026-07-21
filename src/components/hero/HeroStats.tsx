@@ -1,18 +1,16 @@
 interface Props {
   stats: {
     experience: string;
-    companies: string;
+    projects: string;
     countries: string;
-    records: string;
   };
 }
 
 export default function HeroStats({ stats }: Props) {
   const items = [
     { value: stats.experience, label: "Experience" },
-    { value: stats.companies, label: "Companies" },
+    { value: stats.projects, label: "Projects" },
     { value: stats.countries, label: "Countries" },
-    { value: stats.records, label: "Records" },
   ];
 
   return (

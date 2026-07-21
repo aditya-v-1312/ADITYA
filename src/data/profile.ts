@@ -27,7 +27,7 @@ export const profile = {
 
   linkedin: "https://linkedin.com/in/adityachandiramani",
 
-  website: "https://adityachandiramani.com",
+  website: "https://bizenix.in",
 
   resumeEN: "/documents/resume-en.pdf",
 
@@ -37,8 +37,7 @@ export const profile = {
 
   stats: {
     experience: "2+ Years",
-    companies: "5 Companies",
+    projects: "5 Projects",
     countries: "2 Countries",
-    records: "40,000+ Records",
   },
 };
