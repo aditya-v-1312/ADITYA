@@ -117,11 +117,16 @@ export default function GlobeScene({ selected, onSelect }: GlobeSceneProps) {
     [],
   );
 
+  const globeSize =
+    typeof window !== "undefined"
+      ? Math.min(window.innerWidth * 0.9, 700)
+      : 700;
+
   return (
     <Globe
       ref={globeRef}
-      width={700}
-      height={700}
+      width={globeSize}
+      height={globeSize}
       backgroundColor="rgba(0,0,0,0)"
       globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
       bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"

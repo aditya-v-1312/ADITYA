@@ -24,13 +24,16 @@ export default function Contact() {
 
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             <a
-              href={`mailto:${contact.email}`}
+              href={`mailto:${contact.email}?subject=${encodeURIComponent(
+                "Let's Work Together",
+              )}`}
               className="group rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-white/10"
             >
               <Mail className="h-8 w-8 text-blue-400 transition group-hover:scale-110" />
+
               <h3 className="mt-5 text-xl font-semibold">Email</h3>
+
               <p className="mt-2 text-slate-400">{contact.email}</p>
-              href={`mailto:${contact.email}?subject=Let's Work Together`}
             </a>
 
             <a
