@@ -137,8 +137,8 @@ export default function GlobeScene({ selected, onSelect }: GlobeSceneProps) {
       pointLat="lat"
       pointLng="lng"
       pointColor="color"
-      pointAltitude={0.02}
-      pointRadius={0.9}
+      pointRadius={1.6}
+      pointAltitude={0.03}
       onPointClick={(point) => onSelect(point as Location)}
       ringsData={locations}
       ringLat="lat"
@@ -157,6 +157,14 @@ export default function GlobeScene({ selected, onSelect }: GlobeSceneProps) {
       arcDashGap={0.2}
       arcDashAnimateTime={2500}
       arcStroke={1.2}
+      labelsData={locations}
+      labelLat="lat"
+      labelLng="lng"
+      labelText="city"
+      labelSize={1.9}
+      labelDotRadius={0.45}
+      labelColor={() => "#ffffff"}
+      labelResolution={2}
     />
   );
 }

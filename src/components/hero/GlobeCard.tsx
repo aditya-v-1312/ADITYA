@@ -11,7 +11,35 @@ export default function GlobeCard({ location, onClose }: GlobeCardProps) {
   if (!location) return null;
 
   return (
-    <div className="absolute right-0 top-1/2 z-50 w-[420px] -translate-y-1/2 rounded-3xl border border-white/10 bg-slate-900/75 p-7 shadow-2xl backdrop-blur-2xl">
+    <div
+      className="
+        fixed
+        bottom-4
+        left-4
+        right-4
+        z-50
+
+        max-h-[70vh]
+        overflow-y-auto
+
+        rounded-3xl
+        border
+        border-white/10
+        bg-slate-900/90
+        p-6
+        shadow-2xl
+        backdrop-blur-2xl
+
+        lg:absolute
+        lg:bottom-auto
+        lg:left-auto
+        lg:right-0
+        lg:top-1/2
+        lg:w-[420px]
+        lg:max-h-none
+        lg:-translate-y-1/2
+      "
+    >
       <button
         onClick={onClose}
         className="absolute right-5 top-5 text-2xl text-white/50 transition hover:text-white"
@@ -25,7 +53,7 @@ export default function GlobeCard({ location, onClose }: GlobeCardProps) {
             {location.country}
           </p>
 
-          <h2 className="mt-2 text-3xl font-bold text-white">
+          <h2 className="mt-2 text-2xl font-bold text-white lg:text-3xl">
             {location.title}
           </h2>
 
