@@ -4,10 +4,11 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 
 const links = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { label: "Education", href: "#education" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -27,11 +28,11 @@ export default function Navbar() {
         <nav className="hidden items-center gap-10 md:flex">
           {links.map((link) => (
             <a
-              key={link.name}
+              key={link.label}
               href={link.href}
               className="relative text-sm font-medium tracking-wide text-slate-300 transition duration-300 hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
             >
-              {link.name}
+              {link.label}
             </a>
           ))}
         </nav>
